@@ -1,4 +1,4 @@
-`cpp
+```cpp
 // پایه‌های LED
 const int led1 = 8;
 const int led2 = 9;
