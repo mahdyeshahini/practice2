@@ -1,0 +1,35 @@
+`cpp
+// پایه‌های LED
+const int led1 = 8;
+const int led2 = 9;
+
+void setup() {
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+}
+
+void loop() {
+  // حالت اول: هر دو با هم روشن و خاموش با تناوب 1 ثانیه
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  delay(1000);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  delay(1000);
+
+  // حالت دوم: یکی روشن، دیگری خاموش (متناوب)
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, LOW);
+  delay(1000);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, HIGH);
+  delay(1000);
+
+  // حالت سوم: روشن 0.5 ثانیه، خاموش 5 ثانیه
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  delay(500);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  delay(5000);
+}
